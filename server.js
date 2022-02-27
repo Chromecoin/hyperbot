@@ -706,17 +706,7 @@ function abortGame(gameId){
 	})
 }
 
-function enqueueGame(gameId){
-	if(playQueue.find(id => id == gameId)){
-		logFile(`game already in queue ${gameId}`)
 
-		return
-	}
-
-	playQueue.push(gameId)
-
-	logFile(`enqueued game ${gameId} , queue ${playQueue}`)
-}
 
 function playGame(gameId){
 	let abortGameTimeout = null
